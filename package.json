@@ -1,0 +1,36 @@
+{
+  "name": "par-automation-tests",
+  "description": "Playwright - Primary Authority Register (PAR) Automation Test",
+  "scripts": {
+    "lint:fix": "eslint . --fix",
+    "install:playwright": "npx playwright install "
+  },
+  "keywords": [
+    "Playwright",
+    "Cucumber.js",
+    "Axe Core"
+  ],
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.1.1",
+    "@cucumber/pretty-formatter": "^1.0.0-alpha.2",
+    "@eslint/js": "^9.17.0",
+    "@playwright/test": "^1.33.0",
+    "axe-core": "^4.8.2",
+    "axe-playwright": "^1.2.3",
+    "chai": "^4.3.6",
+    "chai-json-schema": "^1.5.1",
+    "chalk": "^5.3.0",
+    "cli-color": "^2.0.3",
+    "cucumber-html-reporter": "^5.5.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.57.1",
+    "fs-extra": "^10.0.0",
+    "globals": "^15.14.0",
+    "moment": "^2.29.4",
+    "path": "^0.12.7",
+    "prettier": "^2.8.8"
+  },
+  "dependencies": {
+    "playwright": "^1.47.2"
+  }
+}
