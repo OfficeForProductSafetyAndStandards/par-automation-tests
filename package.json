@@ -3,7 +3,19 @@
   "description": "Playwright - Primary Authority Register (PAR) Automation Test",
   "scripts": {
     "lint:fix": "eslint . --fix",
-    "install:playwright": "npx playwright install "
+    "install:playwright": "npx playwright install ",
+    "customised:cucumber:report": "node playwright/report/customised-report.js && cat playwright/report/report.json  | npx cucumber-junit > playwright/report/junitreport.xml",
+    "ui:tests": "NODE_ENV=test cucumber-js --retry 0 --parallel 2 --tags '@ui' --require playwright/step-definitions/**/*.js -f json:playwright/report/report.json --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet",
+    "ui:tests:safari": "NODE_ENV=test BROWSER=safari cucumber-js --retry 0 --parallel 2 --tags '@ui' --require playwright/step-definitions/**/*.js -f json:playwright/report/report.json --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet",
+    "ui:tests:firefox": "NODE_ENV=test BROWSER=firefox cucumber-js --retry 0 --parallel 2 --tags '@ui' --require playwright/step-definitions/**/*.js -f json:playwright/report/report.json --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet",
+    "ui:tests:iphone": "NODE_ENV=test BROWSER=\"iPhone 12\" cucumber-js --retry 0 --parallel 2 --tags '@ui' --require playwright/step-definitions/**/*.js -f json:playwright/report/report.json --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet",
+    "ui:tests:andriod": "NODE_ENV=test BROWSER=\"Pixel 5\" cucumber-js --retry 0 --parallel 2 --tags '@ui' --require playwright/step-definitions/**/*.js -f json:playwright/report/report.json --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet",
+    "ui:tests:ipad": "NODE_ENV=test BROWSER=\"iPad Pro 11\" cucumber-js --retry 0 --parallel 2 --tags '@ui' --require playwright/step-definitions/**/*.js -f json:playwright/report/report.json --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet",
+    "ui:tests:edge": "NODE_ENV=test BROWSER=edge cucumber-js --retry 0 --parallel 2 --tags '@ui' --require playwright/step-definitions/**/*.js -f json:playwright/report/report.json --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet"
+
+
+
+
   },
   "keywords": [
     "Playwright",

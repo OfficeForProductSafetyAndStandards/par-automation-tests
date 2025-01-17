@@ -1,1 +1,4 @@
 /node_modules/
+/playwright/report/customised_cucumber_report.html
+/playwright/report/junitreport.xml
+/playwright/report/report.json
